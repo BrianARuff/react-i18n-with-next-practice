@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   const { locale } = useRouter();
   const [data, setData] = React.useState({});
   React.useEffect(() => {
-    fetch("http://localhost:3000/api/")
+    fetch("api/")
       .then((res) => res.json())
       .then((res) => setData(res))
       .catch((err) => console.error(err));
